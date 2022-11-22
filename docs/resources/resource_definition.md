@@ -22,6 +22,14 @@ resource "humanitec_resource_definition" "s3" {
   driver_inputs = {
     values = {
       region = "us-east-1"
+     
+     criteria = [
+    {
+      app_id   = "my-app",
+      env_type = "development",
+      res_id   = "shared.logs-dns"
+    }
+  ]
     }
   }
 }
